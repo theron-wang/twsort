@@ -1,6 +1,5 @@
 ﻿using Spectre.Console;
 using System.Diagnostics;
-using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -15,7 +14,7 @@ public static class ConfigFileParser
 {
     public static async Task<JsonObject?> GetConfigJsonNodeAsync(string path)
     {
-        var scriptLocation = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources", "parser.js");
+        var scriptLocation = Path.Combine(Path.GetDirectoryName(AppContext.BaseDirectory)!, "Resources", "parser.js");
 
         var processInfo = new ProcessStartInfo()
         {

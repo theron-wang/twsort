@@ -1,5 +1,4 @@
 ﻿using Spectre.Console;
-using System.Reflection;
 using System.Text.Json;
 using TWSort.Files;
 using TWSort.Project.V4;
@@ -172,7 +171,7 @@ public class ProjectConfigurationManager
             Version = TailwindVersion.V3
         };
 
-        var baseFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources");
+        var baseFolder = Path.Combine(Path.GetDirectoryName(AppContext.BaseDirectory)!, "Resources");
         var versionFolder = Path.Combine(baseFolder, TailwindVersion.V3.ToString());
         List<Variant> variants = [];
 
@@ -384,7 +383,7 @@ public class ProjectConfigurationManager
             Version = version
         };
 
-        var baseFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "Resources");
+        var baseFolder = Path.Combine(Path.GetDirectoryName(AppContext.BaseDirectory)!, "Resources");
         var versionFolder = Path.Combine(baseFolder, version.ToString());
 
         List<ClassType> classTypes = [];
