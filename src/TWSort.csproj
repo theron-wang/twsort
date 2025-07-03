@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>twsort</Title>
+    <Authors>Theron Wang</Authors>
+    <Description>A simple and efficient CLI tool to sort Tailwind CSS classes in your CSS, HTML, Razor, or other markup files, ensuring a consistent and readable class order.</Description>
+    <PackAsTool>True</PackAsTool>
+    <ToolCommandName>twsort</ToolCommandName>
+    <Product>twsort</Product>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\opacity.json" />
+    <None Remove="Resources\parser.js" />
+    <None Remove="Resources\spacing.json" />
+    <None Remove="Resources\tailwindconfig.json" />
+    <None Remove="Resources\V3\classes.json" />
+    <None Remove="Resources\V3\colors.json" />
+    <None Remove="Resources\V3\order.json" />
+    <None Remove="Resources\V3\variantorder.json" />
+    <None Remove="Resources\V3\variants.json" />
+    <None Remove="Resources\V4\classes.json" />
+    <None Remove="Resources\V4\colors.json" />
+    <None Remove="Resources\V4\order.json" />
+    <None Remove="Resources\V4\theme.json" />
+    <None Remove="Resources\V4\variantorder.json" />
+    <None Remove="Resources\V4\variants.json" />
+    <None Remove="Resources\V4_1\classes.json" />
+    <None Remove="Resources\V4_1\colors.json" />
+    <None Remove="Resources\V4_1\order.json" />
+    <None Remove="Resources\V4_1\theme.json" />
+    <None Remove="Resources\V4_1\variantorder.json" />
+    <None Remove="Resources\V4_1\variants.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\opacity.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\parser.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\spacing.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\tailwindconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V3\classes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V3\colors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V3\order.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V3\variantorder.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V3\variants.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\classes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\colors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\order.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\theme.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\variantorder.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4\variants.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\classes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\colors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\order.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\theme.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\variantorder.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\V4_1\variants.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.50.0" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta5.25306.1" />
+  </ItemGroup>
+
+</Project>
