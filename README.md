@@ -17,7 +17,7 @@ This sorter works best with Tailwind CSS v3 and above. If you are using Tailwind
 
 ## Installation
 
-Download the latest release from [GitHub Releases](https://github.com/your-repo/twsort-cli/releases).
+Download the latest release from [GitHub Releases](https://github.com/theron-wang/twsort/releases).
 
 ## Quick Start
 
@@ -59,7 +59,7 @@ twsort ./src -r --config ./tailwind.css ./tailwind2.css
 
 ## Reference
 
-```sh
+```
 Description:
   Tailwind Class Sorter - Sorts Tailwind CSS classes for consistency and cleanliness
 

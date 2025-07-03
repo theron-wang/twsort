@@ -8,8 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{685368E4-6275-4894-9967-B41FB40C6453}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
+		..\.github\FUNDING.yml = ..\.github\FUNDING.yml
 		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 	EndProjectSection
 EndProject
 Global

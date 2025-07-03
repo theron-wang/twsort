@@ -1,0 +1,44 @@
+name: Publish CLI to GitHub Releases
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Publish for Windows
+      run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/win-x64
+
+    - name: Publish for Linux
+      run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/linux-x64
+
+    - name: Publish for macOS
+      run: dotnet publish -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/osx-x64
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: ${{ github.ref_name }}
+        tag_name: ${{ github.ref_name }}
+        files: |
+          publish/win-x64/*.exe
+          publish/linux-x64/*
+          publish/osx-x64/*

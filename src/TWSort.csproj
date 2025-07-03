@@ -5,15 +5,21 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>twsort</Title>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
     <Authors>Theron Wang</Authors>
     <Description>A simple and efficient CLI tool to sort Tailwind CSS classes in your CSS, HTML, Razor, or other markup files, ensuring a consistent and readable class order.</Description>
     <PackAsTool>True</PackAsTool>
-    <ToolCommandName>twsort</ToolCommandName>
-    <Product>twsort</Product>
+    <ToolCommandName>$(AssemblyName)</ToolCommandName>
+    <Product>$(AssemblyName)</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/theron-wang/twsort</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/theron-wang/twsort</RepositoryUrl>
+    <PackageTags>tailwind;tailwind css;sort</PackageTags>
+    <AssemblyName>$(MSBuildProjectName.ToLower())</AssemblyName>
+	<SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
   </PropertyGroup>
 
   <ItemGroup>
@@ -108,6 +114,10 @@
 
   <ItemGroup>
     <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
