@@ -27,27 +27,27 @@ jobs:
 
       - name: Publish for Windows
         run: |
-          dotnet publish src/TWSort.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/windows-x64
+          dotnet publish src/TWSort.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -o ./publish/windows-x64
           mv ./publish/windows-x64/twsort.exe ./publish/windows-x64/twsort-windows-x64.exe
 
       - name: Publish for Linux x64
         run: |
-          dotnet publish src/TWSort.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/linux-x64
+          dotnet publish src/TWSort.csproj -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -o ./publish/linux-x64
           mv ./publish/linux-x64/twsort ./publish/linux-x64/twsort-linux-x64
 
       - name: Publish for Linux arm64
         run: |
-          dotnet publish src/TWSort.csproj -c Release -r linux-arm64 --self-contained true -p:PublishSingleFile=true -o ./publish/linux-arm64
+          dotnet publish src/TWSort.csproj -c Release -r linux-arm64 --self-contained true -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -o ./publish/linux-arm64
           mv ./publish/linux-arm64/twsort ./publish/linux-arm64/twsort-linux-arm64
 
       - name: Publish for macOS x64
         run: |
-          dotnet publish src/TWSort.csproj -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -o ./publish/macos-x64
+          dotnet publish src/TWSort.csproj -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -o ./publish/macos-x64
           mv ./publish/macos-x64/twsort ./publish/macos-x64/twsort-macos-x64
 
       - name: Publish for macOS arm64
         run: |
-          dotnet publish src/TWSort.csproj -c Release -r osx-arm64 --self-contained true -p:PublishSingleFile=true -o ./publish/macos-arm64
+          dotnet publish src/TWSort.csproj -c Release -r osx-arm64 --self-contained true -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -o ./publish/macos-arm64
           mv ./publish/macos-arm64/twsort ./publish/macos-arm64/twsort-macos-arm64
 
       - name: Create GitHub Release
