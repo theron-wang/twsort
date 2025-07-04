@@ -27,28 +27,28 @@ Download the latest release from [GitHub Releases](https://github.com/theron-wan
 twsort input.html
 ```
 
-### Sort all files in a directory:
+### Sort all files recursively in a directory:
 
 ```sh
 twsort ./src
 ```
 
-### Sort all files recursively in a directory:
+### Sort all files in a directory, not recursively:
 
 ```sh
-twsort ./src -r
+twsort ./src --shallow
 ```
 
 ### Sort all files recursively in a directory, with a specified version:
 
 ```sh
-twsort ./src -r --tailwind-version 4.0.1
+twsort ./src --tailwind-version 4.0.1
 ```
 
 ### Sort all files in a directory with custom file extensions:
 
 ```sh
-twsort ./src -e html,razor,cshtml,tcss
+twsort ./src --extensions html,razor,cshtml,tcss
 ```
 
 ### Specify custom Tailwind CSS configuration files:
