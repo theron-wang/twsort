@@ -1,5 +1,7 @@
 # twsort
 
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/theron-wang/twsort/total)
+
 A simple and efficient CLI tool to sort Tailwind CSS classes in your CSS, HTML, Razor, or other markup files, ensuring a consistent and readable class order.
 
 ## Overview
