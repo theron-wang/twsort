@@ -26,7 +26,7 @@ Download the latest release from [GitHub Releases](https://github.com/theron-wan
 ### Sort a single file:
 
 ```sh
-twsort input.html
+twsort input.html --config path/to/config.file
 ```
 
 ### Sort all files recursively in a directory:
