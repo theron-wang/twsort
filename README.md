@@ -56,7 +56,7 @@ twsort ./src --extensions html,razor,cshtml,tcss
 ### Specify custom Tailwind CSS configuration files:
 
 ```sh
-twsort ./src -r --config ./tailwind.css ./tailwind2.css
+twsort ./src --config ./tailwind.css ./tailwind2.css
 ```
 
 ## Reference
