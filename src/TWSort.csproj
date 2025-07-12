@@ -20,6 +20,8 @@
     <PackageTags>tailwind;tailwind css;sort</PackageTags>
     <AssemblyName>$(MSBuildProjectName.ToLower())</AssemblyName>
 	<SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+	<FileVersion>1.0.1</FileVersion>
+	<AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
