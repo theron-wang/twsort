@@ -26,7 +26,7 @@ Download the latest release from [GitHub Releases](https://github.com/theron-wan
 ### Sort a single file:
 
 ```sh
-twsort input.html
+twsort input.html --config path/to/config.file
 ```
 
 ### Sort all files recursively in a directory:
@@ -56,7 +56,7 @@ twsort ./src --extensions html,razor,cshtml,tcss
 ### Specify custom Tailwind CSS configuration files:
 
 ```sh
-twsort ./src -r --config ./tailwind.css ./tailwind2.css
+twsort ./src --config ./tailwind.css ./tailwind2.css
 ```
 
 ## Reference
